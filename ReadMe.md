@@ -102,4 +102,4 @@ showpage
 
 示例结果:
 ---
-![Test XIB](https://raw.github.com/cqupt/PostScriptLearning/master/ch3_demo10_darw-a-overlapping-squre-again-with-procedure%20and%20inch.png)
+![Test XIB](https://raw.github.com/cqupt/PostScriptLearning/master/demo-pic.png)
