@@ -1,30 +1,30 @@
 % ------- Define procedures----
 
-/inch {72 mul} def   %ÕâÑùµÄ»°,¾Í¿ÉÒÔÖ±½ÓÖ¸¶¨¶àÉÙÓ¢´çÁË.
+/inch {72 mul} def   %è¿™æ ·çš„è¯,å°±å¯ä»¥ç›´æ¥æŒ‡å®šå¤šå°‘è‹±å¯¸äº†.
 
 /box	 % stack: x y => ---
 { 
-newpath moveto		%¶¨Î»Æğµã
+newpath moveto		%å®šä½èµ·ç‚¹
 
-1 inch 0 rlineto	%ÓÒ
-0 1 inch rlineto	%ÉÏ
--1 inch 0 rlineto	%×ó
-closepath 		%·â±Õ:ÏÂ
+1 inch 0 rlineto	%å³
+0 1 inch rlineto	%ä¸Š
+-1 inch 0 rlineto	%å·¦
+closepath 		%å°é—­:ä¸‹
 
 } def
 
 
 /fillbox % stack: grayvalue => ---
 { 
-setgray 		%»Ò¶ÈÉèÖÃ
-fill 			%Ìî³ä
+setgray 		%ç°åº¦è®¾ç½®
+fill 			%å¡«å……
 } def
 
 
 % ----------- Main Program -----------
 
-3.5 inch 4.5 inch box   % ¶¨Î»:×ø±ê(3.5,4.5)Ó¢´ç,È»ºó»æÖÆÒ»¸ö¾ØĞÎ
-0 fillbox		%¸ù¾İÖ¸¶¨»Ò¶ÈÌî³ä
+3.5 inch 4.5 inch box   % å®šä½:åæ ‡(3.5,4.5)è‹±å¯¸,ç„¶åç»˜åˆ¶ä¸€ä¸ªçŸ©å½¢
+0 fillbox		%æ ¹æ®æŒ‡å®šç°åº¦å¡«å……
 
 4 inch 5 inch box
 .4 fillbox
