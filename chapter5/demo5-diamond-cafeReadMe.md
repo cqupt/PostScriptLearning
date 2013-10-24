@@ -12,6 +12,7 @@ CardOutline:
 > 
 >text
 >
+
 doBorder:
 ---
 >
@@ -19,6 +20,7 @@ doBorder:
 > 
 >text
 >
+
 Diamond:
 ---
 >
@@ -26,6 +28,7 @@ Diamond:
 > 
 >text
 >
+
 doText:
 ---
 >
@@ -33,6 +36,7 @@ doText:
 > 
 >text
 >
+
 showpage
 ---
 >
