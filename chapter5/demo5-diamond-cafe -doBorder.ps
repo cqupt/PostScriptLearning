@@ -1,8 +1,10 @@
-doBorder %Print card’s border
-{ 99 99 moveto
-0 126 rlineto %Border 126 pts high
-234 0 rlineto % & 234 points wide
-0 -126 rlineto
-closepath
-2 setlinewidth %2-point-wide line
+doBorder %Print card’s border 名片内矩形
+{ 99 99 moveto %顶点
+0 126 rlineto %Border 126 pts high高,上
+234 0 rlineto % & 234 points wide宽,右
+0 -126 rlineto %下
+closepath %封闭,左
+2 setlinewidth %2-point-wide line,线宽
 stroke } def
+
+doBorder
