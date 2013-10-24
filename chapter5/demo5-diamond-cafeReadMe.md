@@ -1,13 +1,9 @@
 *名片制作步骤分解
 ----
-		CardOutline
-		---
-		doBorder
-		---
-		Diamond
-		---
-		doText
-		---
+		>CardOutline
+		>doBorder
+		>Diamond
+		>doText
 
 CardOutline:
 ---
