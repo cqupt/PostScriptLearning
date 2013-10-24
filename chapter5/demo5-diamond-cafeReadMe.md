@@ -1,10 +1,14 @@
 *名片制作步骤分解
 ----
 		CardOutline
+		---
 		doBorder
+		---
 		Diamond
+		---
 		doText
-		showpage
+		---
+
 CardOutline:
 ---
 >
@@ -30,14 +34,6 @@ Diamond:
 >
 
 doText:
----
->
-> text
-> 
->text
->
-
-showpage
 ---
 >
 > text
