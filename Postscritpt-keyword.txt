@@ -9,3 +9,10 @@ setgray %设置填充颜色 0黑 0.5灰 1白 参数为0到1之间。
 fill %默认黑色填充区域
 stroke
 showpage
+
+/KEY VALUE def    
+/KEY {operations} def 
+findfont
+scalefont
+setfont
+(typography) show

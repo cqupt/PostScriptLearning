@@ -1,0 +1,22 @@
+/showGorilla	% stack: x y
+{ moveto (Gorilla) show }def
+
+/scaleTimes		% stack: scale
+{ /Verdana findfont
+exch scalefont	%scale, using # on stk
+setfont
+} def
+
+6 scaleTimes
+72 300 showGorilla
+
+10 scaleTimes
+72 275 showGorilla
+
+15 scaleTimes
+72 250 showGorilla
+
+25 scaleTimes
+72 225 showGorilla
+
+showpage
