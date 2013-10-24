@@ -1,27 +1,33 @@
 %---------------- Variables ------------------
 /MainFont
-/Helvetica-Bold findfont 15 scalefont def
+/Helvetica-Bold findfont 15 scalefont def   
+%这里key是"MainFont",
+%Vaule是"/Helvetica-Bold findfont 15 scalefont"的
+%	返回值: scaledfont dictionary(15号指定字体的字典对象.)
+
 /SloganFont
 /Helvetica-Oblique findfont 7 scalefont def
+
 /OwnerFont
 /Helvetica findfont 10 scalefont def
 
 
 %---------------- Procedures -------------------
+
 /rightshow % stk: string
 { dup stringwidth pop %get length of string
 120 exch sub %calc. white space
 0 rmoveto %Move over that much
 show } def %show string
 
-/CardOutline %Print card’s outline
+/CardOutline %Print card’s outline外部轮廓--->矩形
 { newpath
-90 90 moveto
-0 144 rlineto
-252 0 rlineto
-0 -144 rlineto
-closepath
-.5 setlinewidth
+90 90 moveto %顶点	
+0 144 rlineto	%上
+252 0 rlineto	%右
+0 -144 rlineto	%下
+closepath		%封闭,左
+.5 setlinewidth	%线宽
 stroke } def
 
 
