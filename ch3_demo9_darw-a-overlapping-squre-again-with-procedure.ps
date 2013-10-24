@@ -1,0 +1,29 @@
+% ----- Define box procedure ---
+/box
+{
+72 0 rlineto		%ÓÒ
+0 72 rlineto		%ÉÏ
+-72 0 rlineto		%×ó
+closepath		%·â±Õ
+}
+def
+
+
+% --------- Begin Program -----------
+
+newpath % First box
+252 324 moveto box
+0 setgray
+fill
+
+newpath % Second box
+270 360 moveto box
+.4 setgray
+fill
+
+newpath % Third box
+288 396 moveto box
+.8 setgray
+fill
+
+showpage
