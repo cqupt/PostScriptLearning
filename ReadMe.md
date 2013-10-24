@@ -5,6 +5,7 @@
 [地址](https://github.com/cqupt/PostScriptLearning)	
 
 *示例代码
+=====
 ``` 
 % ------- Define procedures----
 
@@ -43,4 +44,5 @@ fill 			%填充
 showpage
 ``` 
 示例结果:
+=====
 ![Test XIB](img)
