@@ -6,12 +6,11 @@
 
 *目录结构:
 ====
-CHAPTER3
-===
-BEGINNING GRAPHICS
-CHAPTER4
-===
-POSTSCRIPT DICTIONARIES
+CHAPTER3		BEGINNING GRAPHICS
+CHAPTER4		POSTSCRIPT DICTIONARIES
+
+
+
 *示例代码
 ====
 ``` 
@@ -51,6 +50,7 @@ fill 			%填充
 
 showpage
 ``` 
+
 示例结果:
 ====
 ![Test XIB](https://raw.github.com/cqupt/PostScriptLearning/master/ch3_demo10_darw-a-overlapping-squre-again-with-procedure%20and%20inch.png)
