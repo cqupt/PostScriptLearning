@@ -14,31 +14,33 @@
 CardOutline:
 ---
 >
-> text
+> 定位
 > 
->text
+>绘制矩形
 >
 
 doBorder:
 ---
 >
-> text
+> 定位
 > 
->text
+>绘制矩形
 >
 
 Diamond:
 ---
 >
-> text
+> 定位
 > 
->text
+>绘制菱形,填充
 >
 
 doText:
 ---
 >
-> text
+> 定位
 > 
->text
+>设置字体
+>
+>显示字符串
 >
