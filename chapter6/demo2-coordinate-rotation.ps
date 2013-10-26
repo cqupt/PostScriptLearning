@@ -1,0 +1,26 @@
+/Times-Roman findfont 30 scalefont setfont
+
+/square %procedure from
+{ 
+newpath % previous program
+0 0 moveto
+90 0 lineto
+90 90 lineto
+0 90 lineto
+closepath 
+fill
+6 92 moveto %Label the box
+(A Box) show
+} def
+
+square %do a square
+
+300 150 translate %move coord. sys.
+60 rotate %and rotate it旋转坐标轴
+square %do it again...
+
+300 150 translate
+120 rotate
+square %do a third square再次旋转坐标轴
+
+showpage
