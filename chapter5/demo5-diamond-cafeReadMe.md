@@ -4,14 +4,14 @@
 >
 >[CardOutline](https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#CardOutline)
 >
->[doBorder] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#doborder)
+>[doBorder] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#doBorder)
 >
 >[Diamond] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#Diamond)
 >
 >[doText](https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#doText)
 >
 
-CardOutline:
+CardOutline
 ---
 >
 > 定位
@@ -19,7 +19,7 @@ CardOutline:
 >绘制矩形
 >
 
-doBorder:
+doBorder
 ---
 >
 > 定位
@@ -27,7 +27,7 @@ doBorder:
 >绘制矩形
 >
 
-Diamond:
+Diamond
 ---
 >
 > 定位
@@ -35,7 +35,7 @@ Diamond:
 >绘制菱形,填充
 >
 
-doText:
+doText
 ---
 >
 > 定位
