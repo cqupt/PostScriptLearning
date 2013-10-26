@@ -52,17 +52,25 @@ closepath
 
 
 /doText %Print card’s text
-{ 0 setgray 90 180 moveto
-MainFont setfont
-(Diamond Cafe) rightshow
+{
+0 setgray			
+
+90 180 moveto%定点
+MainFont setfont%字体
+(Diamond Cafe) rightshow%显示
+
 90 168 moveto
 SloganFont setfont
 ("The Club of Lonely Hearts") rightshow
+
 216 126 moveto
 OwnerFont setfont
 (Sam Spade) show
+
 216 111 moveto
-(Owner) show } def
+(Owner) show
+
+} def
 
 
 
