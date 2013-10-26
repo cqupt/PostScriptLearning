@@ -2,13 +2,13 @@
 ----
 
 >
->[CardOutline](https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#CardOutline)
+>[CardOutline](https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#cardoutline)
 >
->[doBorder] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#doBorder)
+>[doBorder] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#doborder)
 >
->[Diamond] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#Diamond)
+>[Diamond] (https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#diamond)
 >
->[doText](https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#doText)
+>[doText](https://github.com/cqupt/PostScriptLearning/blob/master/chapter5/demo5-diamond-cafeReadMe.md#dotext)
 >
 
 CardOutline
