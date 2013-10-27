@@ -1,0 +1,13 @@
+/inch {72 mul} def
+
+newpath
+3 inch  4 inch 1 inch  0 180 arc
+stroke%预涂到画纸上
+
+newpath
+3.333 inch  2.333 inch  moveto
+3 inch  2 inch  1 inch  0 180 arc
+%此时会把currentpoint和圆弧起点连接起来
+stroke
+
+showpage
