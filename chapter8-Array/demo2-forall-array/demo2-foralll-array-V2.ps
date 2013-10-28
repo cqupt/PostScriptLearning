@@ -1,0 +1,40 @@
+% -------------- Variables ---------------
+/inch { 72 mul } def 
+/LM 1 inch def 
+/RM 3 inch  def 
+/ypos 10 inch  def 
+/lineheight 0.5 inch  def 
+
+
+% ------------- Procedures ---------------
+
+/crlf 
+{
+ypos lineheight sub 
+/ypos exch def 
+LM ypos moveto 
+} def 
+
+/prtstr %stack: str
+{ 
+dup stringwidth pop
+currentpoint pop add RM gt
+{ crlf } if 
+show
+} def 
+
+/format 
+{ 
+	{ prtstr ( ) show} forall
+} def
+
+%------------- Main Program --------------
+/Vani findfont 10 scalefont setfont
+LM ypos moveto
+
+[(Concience)(is)(the)(inner)(voice)
+(that)(warns)(us)(somebody)(may)(be)
+(looking)( - Mencken) ]
+format
+
+showpage

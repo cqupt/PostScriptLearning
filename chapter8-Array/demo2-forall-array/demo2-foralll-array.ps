@@ -1,0 +1,30 @@
+% -------------- Variables ---------------
+/LM 72 def %right margin
+/RM 216 def %left margin
+/ypos 720 def %current y-position
+/lineheight 11 def %distance between lines
+% of text
+% ------------- Procedures ---------------
+
+/crlf %move to next line
+{ ypos lineheight sub %decrease ypos
+/ypos exch def % ...& save new value
+LM ypos moveto } def %move to next line
+/prtstr %stack: str
+{ dup stringwidth pop %calc. length of string
+currentpoint pop %get hor. position
+add RM gt % sum > right margin?
+{crlf} if %if so, carriage return
+show } def %print string
+/format %stack: [string array]
+{ {prtstr ( ) show} forall
+} def
+%------------- Main Program --------------
+/Vani findfont 10 scalefont setfont
+LM ypos moveto
+%Text array:
+[(Concience)(is)(the)(inner)(voice)
+(that)(warns)(us)(somebody)(may)(be)
+(looking)( - Mencken) ]
+format
+showpage
