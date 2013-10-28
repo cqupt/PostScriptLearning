@@ -1,0 +1,40 @@
+/inch { 72 mul } def
+/LM 1 inch def
+/Vani findfont 15 scalefont setfont
+/outputFormat
+%Stack:n
+{ 
+	dup num2str
+	(!=) show
+	doFactorial num2str
+	newline
+}def 
+
+/num2str 
+%stack:num
+%数字转换为字符串打印
+{ nString cvs show }def
+
+/nString 7 string def %定义指定长度的空字符串
+
+/doFactorial 
+%stack: n
+%递归调用
+{
+dup 1 gt
+{ dup 1 sub doFactorial mul  }if
+}def
+
+/newline 
+%(x,y)->(x,y-16)->(y-16,x)-->(y-16,LM)-->(LM,y-16)
+{
+	currentpoint 0.5 inch  sub 
+	exch pop
+	LM exch 
+	moveto 
+}def
+
+newpath
+LM 10 inch moveto
+1 1 10 { outputFormat } for
+showpage

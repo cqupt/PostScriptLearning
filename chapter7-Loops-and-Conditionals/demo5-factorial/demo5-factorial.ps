@@ -1,0 +1,32 @@
+% ---------- Variables & Procedures -----------
+
+/LM 72 def
+/Vani findfont 15 scalefont setfont
+/nstr 7 string def
+
+/newline	%移动到下一行起点:y坐标减少;x坐标替换为LM,移动到新的起点
+{ 
+currentpoint 16 sub 
+exch pop
+LM exch  moveto
+} def
+
+/factorial %stack: n --- n! (after) % 如果n>1,n*f(n-1)
+{
+dup 1 gt
+{dup 1 sub factorial mul} if
+} def
+
+/prt-n { nstr cvs show } def
+/prtFactorial
+{ 
+dup prt-n
+(! = ) show
+factorial prt-n
+newline
+} def
+
+% ----------- Program ---------------
+LM 600 moveto
+1 1 10 { prtFactorial } for
+showpage

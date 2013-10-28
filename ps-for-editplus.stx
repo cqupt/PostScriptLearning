@@ -1,0 +1,81 @@
+#TITLE=ps
+;ps  syntax file written by urmyfaith.
+; This file is required for EditPlus to run correctly.
+
+#DELIMITER=,(){}[]-+*%/="'~!&|<>?:;.#
+#QUOTATION1='
+#QUOTATION2="
+#CONTINUE_QUOTE=n
+#LINECOMMENT=%
+#COMMENTON=/*
+#COMMENTOFF=*/
+#ESCAPE=\
+#CASE=y
+#NUMBER_PATTERN=ps
+#SPECIAL_STX=ps
+
+#KEYWORD=Stack Operator
+clear
+dup
+exch
+pop
+roll
+add
+div
+idiv
+mod
+mul
+sub
+#KEYWORD=Interactive Operators
+==
+pstack
+#KEYWORD=Path Construction
+closepath
+lineto
+rlineto
+moveto
+rmoveto
+newpath
+arc
+arcn
+arcto
+currentpoint
+#KEYWORD=Painting
+fill
+setfray
+setlinewidth
+stroke
+#KEYWORD=Output
+showpage
+#KEYWORD=Dictionary 
+def
+#KEYWORD=Character Font
+findfont
+scalefont
+setfont
+show
+stringwidth
+#KEYWORD=Control
+repeat
+exit
+for
+if
+ifelse
+loop
+string
+cvs
+eq
+ne
+gt
+ge
+lt
+le
+#KEYWORD=Coordinate System
+rotate
+scale
+translate
+#KEYWORD=Graphics State
+grestore
+gsave
+
+#

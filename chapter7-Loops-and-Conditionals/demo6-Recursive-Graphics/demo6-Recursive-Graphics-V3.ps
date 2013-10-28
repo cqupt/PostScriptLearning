@@ -1,0 +1,36 @@
+% ------------ Variables & Procedures -------------
+/depth 0 def 
+/maxdepth 10 def
+/ADDdepth { /depth depth 1 add def  } def 
+/SUBdepth { /depth depth 1 sub def   } def
+/inch { 72 mul } def 
+
+/prtVLine 
+% parameter: 	NULL
+% function:	print a vert. line
+{ 
+	0 3 inch rlineto 
+	currentpoint stroke translate 
+	0 0 moveto
+} def 
+
+/prtArrow
+% parameter:	NULL
+% function:	print recureive arrow
+{ 
+ gsave
+ 0.6 0.6 scale
+ 10 setlinewidth
+ ADDdepth
+ prtVLine
+ depth maxdepth le
+ { 135 rotate prtArrow -270 rotate prtArrow}if
+ SUBdepth
+ grestore
+} def 
+
+% ----Main Program---
+4 inch 5 inch moveto
+prtArrow 
+stroke
+showpage
