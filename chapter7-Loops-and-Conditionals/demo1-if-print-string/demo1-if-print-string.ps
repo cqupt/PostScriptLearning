@@ -1,0 +1,42 @@
+% -------------- Variables ---------------
+/LM 72 def %左边距
+/RM 216 def %右边距
+/ypos 720 def %当前位置
+/lineheight 14 def  %行高
+
+% ------------- Procedures ---------------
+
+/newline	%移动到下一行:计算下一行的纵坐标=当前纵坐标-行高
+{ 
+ypos lineheight sub
+/ypos exch def 
+LM ypos moveto 
+} def 
+
+/prtstr %stack: str 计算字符串长度,当前水平坐标+字符串长度 >? 右边距 如果是,在新的一行显示字符串.
+{ 
+dup stringwidth pop %calc. length of string
+currentpoint pop %get horiz. position
+add RM gt %sum > right margin?
+{newline} if %if so, next line
+show
+} def 
+
+%------------- Main Program --------------
+/Vani findfont 13 scalefont setfont
+LM ypos moveto
+(If )prtstr 
+(you )prtstr 
+(tell ) prtstr
+(the ) prtstr 
+(truth, ) prtstr
+(you ) prtstr
+(don't ) prtstr
+(have ) prtstr
+(to ) prtstr
+(remember ) prtstr
+(anything. ) prtstr
+(- Mark ) prtstr 
+(Twain ) prtstr
+(Life choosed us , we design life, find beauty and have faith. ) prtstr
+showpage

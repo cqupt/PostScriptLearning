@@ -1,0 +1,25 @@
+/inch { 72 mul } def 
+
+/DrawAnX %画"X"
+{
+3 3 rmoveto -6 -6 rlineto
+0 6 rmoveto 6 -6 rlineto
+stroke
+} def
+
+
+3 inch  3 inch  moveto DrawAnX
+3 inch  5 inch  moveto DrawAnX
+5 inch  5 inch  moveto DrawAnX
+
+3 inch 3 inch  moveto
+3 inch 5 inch  5 inch 5 inch  0.5 inch  arcto	%画三个点组成的两条线圆角
+4 {pop} repeat
+
+5 inch 5 inch  moveto
+3 inch 5 inch  3 inch 3 inch  1 inch  arcto
+4 {pop} repeat
+
+
+stroke
+showpage

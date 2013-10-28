@@ -1,0 +1,38 @@
+% ------- Variables & Procedures ---------
+/inch { 72 mul } def 
+/scalefactor 1 def
+/counter 0 def
+/DecreaseScale {  scalefactor .2 sub /scalefactor exch def  } def %缩小因子
+/IncreaseCounter { /counter counter 1 add def } def %计数器自加
+
+/trappath 
+{ 
+0 0 moveto 
+90 0 rlineto%右
+-20 45 rlineto%上
+-50 0 rlineto%左
+closepath %下,封闭
+} def
+
+/doATrap	%保存path,纵坐标缩小,画轮廓,判断counter奇偶,设置填充颜色(清除path),恢复path.
+{
+gsave
+1 scalefactor scale %scale vert. axis
+trappath
+counter 2 mod 0 eq 
+{.5} {0} ifelse setgray 
+fill
+grestore 
+} def 
+
+% ------------ Begin Program ----------
+3 inch 2 inch  translate
+% 增加计算器;绘制梯形;缩放y轴;定点下次绘制位置.
+5
+{
+IncreaseCounter
+doATrap
+DecreaseScale
+0  1 inch  translate 
+} repeat
+showpage

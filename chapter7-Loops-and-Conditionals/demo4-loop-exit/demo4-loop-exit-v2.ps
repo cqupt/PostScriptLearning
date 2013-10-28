@@ -1,0 +1,25 @@
+/inch { 72 mul } def 
+/pagewidth 8.5 inch  def
+/doCircle{ xpos ypos radius 0 360 arc stroke} def
+/increase-x 
+{ 
+xpos radius add
+/xpos exch def 
+} def
+
+/lineofcircles %stack: radius y
+{ 
+/ypos exch def 
+/radius exch def 
+/xpos 0 def 
+{
+xpos pagewidth le
+{doCircle increase-x} {exit}  ifelse
+} loop 
+} def 
+
+% --------------- Begin Program -----------
+0.5  inch 3 inch  lineofcircles
+1 inch 5 inch  lineofcircles
+1.5  inch 7 inch  lineofcircles
+showpage

@@ -1,0 +1,45 @@
+% ------------ Define Procedures -------------
+/HoboStd findfont 27 scalefont setfont
+
+/fourpops
+{ 4 {pop} repeat } def
+
+/inch { 72 mul } def
+
+/background%背景:圆角矩形,黑色填充.
+{ 
+0 18 moveto 
+0 1 inch  2 inch 1 inch  18 arcto fourpops
+2 inch 1 inch 2 inch 0 18 arcto fourpops
+2 inch 0 0 0 18 arcto fourpops
+0 0 0 1 inch 18 arcto fourpops
+fill 
+} def
+
+/moon%画圆,灰色填充
+{ 
+ 
+1.66 inch  0.66 inch  18 0 360 arc 
+.6 setgray
+fill 
+} def 
+
+/omaha%文字,居中文字,拉伸文字.
+%居中文字: (圆角矩形长度-文字长度)/2 0 rmoveto
+{ 
+1 setgray
+0 -1 moveto
+1 2 scale % double y-scale
+(OMAHA) stringwidth pop % width of word
+2 inch  exch sub 2 div % calc. indentation
+0 rmoveto % indent
+(OMAHA) show 
+} def 
+
+% ------------ Begin Program -----------------
+newpath
+3 inch  5 inch translate
+background
+moon
+omaha
+showpage

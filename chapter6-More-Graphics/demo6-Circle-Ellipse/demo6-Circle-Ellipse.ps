@@ -1,0 +1,20 @@
+%======定义三个函数======
+
+/inch {72 mul} def	%stack: n 
+%定义1英尺
+
+/doACircle %画一个半径一英尺的圆
+{ 0 0 1 inch  0 360 arc stroke } def
+
+/doAnEllipse%画一个短轴缩半的椭圆
+{ 1 .5 scale
+doACircle
+stroke } def
+
+%=====main program=======
+2 inch  6 inch translate doACircle			%画一个圆
+4 {
+1 inch 0 translate										%右移动1英尺
+doAnEllipse												%画一个短轴缩半的椭圆
+} repeat
+showpage

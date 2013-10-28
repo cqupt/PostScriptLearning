@@ -1,0 +1,23 @@
+/Vani findfont 12 scalefont setfont
+/inch { 72 mul } def
+/LM 1 inch def
+/lineheight 1 def
+/ypos 10 inch def
+
+/newline	%移动到下一行:计算下一行的纵坐标=当前纵坐标-行高
+{ 
+ypos lineheight sub
+/ypos exch def 
+LM ypos moveto 
+} def 
+
+newpath
+1 inch 10 inch moveto
+0 1  600 
+{ 
+currentpoint pop 7 inch gt
+{ newline }if
+(k) show  
+}for
+stroke
+showpage

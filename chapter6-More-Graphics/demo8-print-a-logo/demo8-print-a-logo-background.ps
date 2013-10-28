@@ -1,0 +1,19 @@
+/fourpops
+{ 4 {pop} repeat } def
+
+/inch { 72 mul } def
+
+/background 
+{ 
+0 18 moveto 
+0 1 inch  2 inch 1 inch  18 arcto fourpops 
+2 inch 1 inch 2 inch 0 18 arcto fourpops 
+2 inch 0 0 0 18 arcto fourpops 
+0 0 0 1 inch 18 arcto fourpops 
+fill 
+} def
+
+3 inch  5 inch translate
+background
+stroke
+showpage
