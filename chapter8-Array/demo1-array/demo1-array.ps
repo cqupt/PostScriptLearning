@@ -1,0 +1,38 @@
+% ------------ Variables & Procedures ----------
+/inch { 72 mul } def 
+/LM 1 inch  def %Left margin
+/Tempstr 30 string def
+/Vani findfont 12 scalefont setfont
+
+/crlf %next line
+{ 
+	currentpoint 0.5 inch  sub
+	exch pop
+	LM exch moveto
+} def
+
+/aryshow % stack array将数组赋值给变量;循环取出每一个数组元素的值;打印元素值
+{ 
+	/ary exch def %put array in var.
+	0 1 ary length 1 sub %loop parameters
+	{ 
+	ary exch get %get array member
+	Tempstr cvs %convert to string 
+	show
+	crlf 
+	} for
+} def
+
+LM 10 inch  moveto
+%begin array:
+[
+(mouse) %string
+27 %number
+/aName %literal
+[6 12] %array
+{crlf} %executable
+LM %variable
+/Vani findfont %font dictionary
+]
+aryshow
+showpage

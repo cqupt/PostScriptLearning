@@ -1,0 +1,38 @@
+% ------------ Variables & Procedures ----------
+/inch { 72 mul } def 
+/LM 1 inch def
+/tempString 20 string def 
+/Vani findfont 12 scalefont setfont 
+
+/newline 
+% parameter:	null
+% function:	print new line
+{ 
+	currentpoint 0.5 inch sub
+	exch pop
+	LM exch moveto 
+} def 
+/printArray
+% parameter:	arrayObj
+% function:	将数组赋值给变量;循环取出每一个数组元素的值;打印元素值
+{ 
+	/array exch def
+	0 1 array length 1 sub
+	{
+		array exch get  % ->Array-element-obj
+		tempString cvs show % convert  to string for output.
+		newline 
+	}for
+} def 
+
+LM 10 inch moveto
+[
+	(mouse) %string
+	27 %number
+	/aName %literal
+	[6 12] %array
+	{crlf} %executable
+	LM %variable
+	/Vani findfont %font dictionary
+]
+printArray
