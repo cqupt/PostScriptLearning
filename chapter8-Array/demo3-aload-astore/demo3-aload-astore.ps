@@ -1,0 +1,24 @@
+/inch { 72 mul } def
+/LM 1 inch  def 
+/newline
+{ currentpoint 0.5 inch sub exch pop LM exch moveto } def
+/PrintSample     % [string fontname]
+{ aload pop      %unload array
+findfont 8 scalefont setfont     %set font 
+show
+newline
+} def                %print string
+/FontList
+[  
+	[(The five boxing wizards jump quickly.)
+	/Vani]
+	[(The five boxing wizards jump quickly.)
+	/Playbill]
+	[(The five boxing wizards jump quickly.)
+	/Symbol]
+] def          
+% ------------ Begin Program ----------
+LM 10 inch  moveto
+
+FontList  {PrintSample} forall 
+showpage

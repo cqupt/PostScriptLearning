@@ -1,0 +1,52 @@
+% ------- Variables and Procedures --------
+/inch { 72 mul } def 
+/TM 11 inch  def 
+/BM -12 def 
+/LM 0 def 
+/RM 612 def 
+
+/newline
+{
+currentpoint 13 sub
+exch pop LM
+exch moveto
+} def
+
+/nlIfNec
+{ 
+currentpoint pop RM gt
+{newline} if
+} def 
+
+/done? 
+{ currentpoint exch pop 
+BM lt
+} def
+
+/fillpage 
+{
+	/strg exch def
+	{ 
+		{pop pop nlIfNec} strg kshow
+		done? {exit} if
+	} loop
+} def
+
+% ------------ Begin Program -----------
+/Symbol   findfont 10 scalefont setfont
+LM TM moveto
+.5 setgray
+(urmyfaith) fillpage
+
+/Vani  findfont 30 scalefont setfont
+RM LM sub 
+(urmyfaith) stringwidth pop sub
+2 div
+TM BM sub
+2 div
+moveto
+0 setgray
+(urmyfaith) show
+
+
+showpage

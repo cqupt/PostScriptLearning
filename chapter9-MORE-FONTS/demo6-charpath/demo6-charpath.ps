@@ -1,0 +1,35 @@
+% -------- Procedures --------
+/inch { 72 mul } def 
+
+/oshow %stack: (string)
+{ true charpath stroke } def
+
+/circleofAdobe
+{ 
+	0 10 360
+	{ 
+		gsave
+		rotate 0 0 moveto
+		(faith) oshow
+		grestore
+	} for
+} def
+
+% --- Begin Program ---
+/Vani   findfont 30 scalefont setfont
+
+250 400 translate
+0.5 setlinewidth
+circleofAdobe
+
+0 0 moveto
+0 setgray 
+(faith) show
+
+(  urmyfaith) true charpath
+gsave 
+1 setgray
+fill 
+grestore
+stroke
+showpage

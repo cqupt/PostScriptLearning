@@ -1,0 +1,45 @@
+%--------- Variables  &  Procedures -------
+/inch { 72 mul } def 
+/RM 8 inch def
+/TM 10 inch def
+/xpos 0 inch   def  
+/ypos  0 inch   def 
+
+/triple-Line	
+% function:	定点,三条线
+{ 
+		0 120 240
+		{ 
+			gsave
+			xpos ypos translate
+			rotate
+			0 0 moveto 0.25 inch 0 lineto
+			stroke
+			grestore
+		} for
+} def 
+
+/fillArea
+% function:	填满区域
+{	
+	2  setlinewidth
+	0 0.5 inch RM 
+	{
+		/xpos exch xpos add def 
+		0 0.5 inch TM
+		{
+			/ypos exch ypos add def 
+			triple-Line	
+		}for
+	}for
+} def 
+
+%-----------Main program--------------
+0 0 moveto
+fillArea
+
+
+
+
+
+

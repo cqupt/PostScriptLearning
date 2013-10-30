@@ -1,0 +1,52 @@
+%--------- Variables  &  Procedures -------
+/inch { 72 mul } def 
+/LM 1 inch def
+/RM 8 inch def
+/TM 10 inch def
+/BM 1 inch def
+
+/xpos	5  def  
+/ypos  5  def 
+/xADD { /xpos xpos  0.5 inch def  } def 
+/yADD { /ypos ypos  0.5 inch def  } def 
+
+/area
+% function:	矩形区域
+{ 
+	newpath
+	1 inch  1 inch  moveto
+	LM TM lineto %上
+	RM TM  lineto%右
+	RM BM lineto %下
+	closepath %封闭
+} def 
+
+
+/triple-Line	
+% function:	定点,三条线
+{ 
+
+	0 120 240
+	{ 
+		gsave
+		rotate
+		0 0 moveto 0.25 inch 0 lineto
+		stroke
+		grestore
+	} for
+
+} def 
+
+%-----------Main program--------------
+0 0 moveto
+area clip
+
+3.5  inch  6.5 inch  translate
+0.25  setlinewidth
+triple-Line
+
+
+
+
+
+

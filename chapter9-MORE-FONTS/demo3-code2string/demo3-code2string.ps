@@ -1,0 +1,44 @@
+% -------- Variables & Procedures ---------
+/Vani findfont 10 scalefont setfont
+/char 1 string def
+/nstr 3 string def
+
+/newline
+{ 
+	currentpoint 11 sub
+	exch pop LM
+	exch moveto 
+} def
+
+/prt-n %stack: code(number)
+{
+	nstr cvs show
+} def
+
+/prtchar 
+%  parameter:	stack: code
+% function:	brings the numeric code to the top of the stack and puts it into 
+%---------  put:  'ArrayObj index (Element) put ' 
+{
+	char 0
+	3 -1 roll put
+	char show
+} def
+
+/PrintCodeandChar %stack: code
+{
+	dup prt-n
+	( ) show
+	prtchar 
+	newline 
+} def
+
+% ---------- Begin Program ----------
+/LM 72 def
+LM 600 moveto
+161 1 208 {PrintCodeandChar} for
+
+/LM 144 def
+LM 600 moveto
+225 1 251 {PrintCodeandChar} for
+showpage

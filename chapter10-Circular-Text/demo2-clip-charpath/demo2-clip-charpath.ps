@@ -1,0 +1,26 @@
+% -------- Procedures ---------------
+/inch { 72 mul } def 
+/Vani  findfont 36 scalefont setfont
+/rays
+{	0 1 360
+	{ 
+		gsave
+		rotate
+		0 0 moveto 216 0 lineto
+		stroke
+		grestore
+	} for
+} def
+% -------- Begin Program ---------
+
+3.5  inch  6.5 inch  translate
+0.25  setlinewidth
+newpath
+0 0 moveto
+(URMyFaith) true charpath  clip
+%stroke
+newpath
+
+ 2  inch  -0.3 inch   translate
+rays
+showpage

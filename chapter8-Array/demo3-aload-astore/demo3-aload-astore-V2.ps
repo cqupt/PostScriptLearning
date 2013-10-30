@@ -1,0 +1,40 @@
+%V--------- Variables & procedures -------
+/inch { 72 mul } def
+/LM 1 inch  def 
+
+/newline
+% parameter:	null
+% function:	换行
+{	
+	currentpoint 0.5 inch sub 
+	exch pop
+	LM exch moveto
+} def 
+/PrtSting
+% parameter:	stack:[string font]
+% function:	 根据指定的字体打印字符串:放到堆栈上,移除自身; 设置字体;打印字符串
+{ 
+	aload pop
+	findfont 20 scalefont setfont
+	show
+	newline
+} def 
+
+/FontList
+% parameter:	null
+% function:	an array
+[
+	[(The five boxing wizards jump quickly.)
+	/Vani ]
+	[(The five boxing wizards jump quickly.)
+	/Playbill]
+	[(The five boxing wizards jump quickly.)
+	/Symbol]
+] def 
+
+
+%M-----------Main program--------------
+newpath
+LM 10 inch moveto
+FontList { PrtSting } forall
+showpage

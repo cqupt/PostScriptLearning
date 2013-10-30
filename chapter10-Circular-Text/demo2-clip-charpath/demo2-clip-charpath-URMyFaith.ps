@@ -1,0 +1,62 @@
+%--------- Variables  &  Procedures -------
+
+/inch { 72 mul } def 
+/TM 11 inch def
+/BM -0.5 inch def
+/LM 0 def
+/RM 8.5 inch def
+/str2print (abcdefghijklmnopqrstuvwxyz) def 
+
+/fillpage
+% parameter: stack:sring	
+% function:	字符串填满当前页面:换行? 打印完?
+{ 
+	/str exch def
+	{
+		{ pop pop newline?  } str kshow
+		reachButtom? { exit }if
+	}loop
+} def 
+
+/newline? 
+% function:	判断是否换行 
+{
+	currentpoint pop RM gt
+	{newline} if
+}def
+
+/newline
+% function:	换行
+{ 
+	currentpoint 5 sub
+	exch pop
+	LM exch moveto 
+} def 
+
+/reachButtom?
+% parameter:	
+% function:	到页面底部?
+{ 
+	currentpoint exch pop%get x-axis
+	BM lt
+} def 
+
+%-----------Main program--------------
+
+%--------- 填充页面  -------
+/Vani  findfont  72  scalefont setfont
+
+1  inch  7 inch  translate
+newpath 
+0.25  setlinewidth
+0 0 moveto
+(URMyFaith) true charpath  clip
+
+/Vani  findfont  8 scalefont setfont
+-3.5  inch  -6.5 inch  rmoveto
+LM TM rmoveto
+0.5 setgray
+str2print fillpage
+
+showpage 
+

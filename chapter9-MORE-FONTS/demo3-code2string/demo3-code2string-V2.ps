@@ -1,0 +1,45 @@
+%--------- Variables  &  Procedures -------
+/inch { 72 mul } def 
+/LM 1 inch def
+/nstr 3 string def 
+/singleStr 1 string def 
+/PrintCodeandChar
+% parameter:	stack: n
+% function:	打印编码和对应的字符   "编码     字符"
+{ 
+	dup prt-n 
+	(     ) show
+	prt-char 
+	newline
+} def 
+
+/prt-n
+% parameter:	stack:n
+% function:	打印编码数字
+{ 
+	nstr cvs show 
+} def 
+
+/prt-char
+% parameter:	stack:n
+% function:	打印编码对应字符
+%---------  数字放入单字符串,然后打印  -------
+{ 
+	singleStr 0
+	3 -1 roll put
+	singleStr show
+} def 
+
+/newline	
+% function:	换行
+{ 
+	currentpoint 0.2 inch sub
+	exch pop
+	LM exch 
+	moveto 
+} def 
+
+%-----------Main program--------------
+LM 10 inch moveto
+/Vani findfont 12 scalefont setfont 
+161 1 208 { PrintCodeandChar} for

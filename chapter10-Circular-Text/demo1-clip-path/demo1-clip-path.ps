@@ -1,0 +1,35 @@
+% ---- Procedures ----
+/inch { 72 mul } def 
+/trianglepath
+% function:	封闭的三角形区域 
+{ 
+	newpath
+	0 0 moveto
+	2 inch  0 lineto
+	1 inch  3 inch  lineto
+	closepath
+} def
+
+/verticals
+% function:	竖直的线条 
+{ 
+	newpath
+	0 9 144{ 0 moveto 0 3 inch  rlineto } for
+	stroke 
+} def
+
+/horizontals
+% function:	水平的线条 
+{ 
+	newpath
+	0 10 200  { 0 exch moveto 2 inch  0 rlineto } for
+	stroke 
+} def
+
+% ---- Begin Program ---
+%---------  设置三角形区域,然后绘制矩形的网格,最后显示只有三角形区域内有网格  -------
+3 inch 4 inch   translate
+trianglepath clip %set clipping path
+verticals %Do grid
+horizontals
+showpage

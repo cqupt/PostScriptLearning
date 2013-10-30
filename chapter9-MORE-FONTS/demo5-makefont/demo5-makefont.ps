@@ -1,0 +1,28 @@
+% ---- Variables & Procedures ----
+/basefont /Vani  findfont def
+/LM 72 def
+/newline
+{ 
+	currentpoint 13 sub
+	exch pop
+	LM exch moveto
+} def
+
+% ----- Begin Program ------
+
+LM 600 moveto
+
+%normal print:
+basefont [12 0 0 12 0 0] makefont setfont
+("Talking of axes,") show newline
+
+%expanded:
+basefont [17 0 0 12 0 0] makefont setfont
+(said the Duchess,) show newline
+
+%condensed:
+basefont [7 0 0 12 0 0] makefont setfont
+("Off with her head!") show newline
+
+basefont [12 0 6.93 12 0 0] makefont setfont
+( - Lewis Carroll) show
